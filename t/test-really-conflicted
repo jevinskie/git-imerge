@@ -38,7 +38,7 @@ do
 done
 commit -m 'm⇒0'
 
-git checkout -b c master --
+git checkout -b c main --
 
 modify c.txt 1
 modify conflict0.txt "c version"
@@ -75,7 +75,7 @@ modify c.txt 9
 modify conflict7.txt "c version"
 commit -m "c⇒9"
 
-git checkout -b d master --
+git checkout -b d main --
 
 modify d.txt 1
 modify conflict0.txt "d version"

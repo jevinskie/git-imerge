@@ -88,7 +88,7 @@ flip_flop_test () {
         commit -m "a⇒$i on branch a"
     done
 
-    git checkout -b b master --
+    git checkout -b b main --
     for i in 1 2 3 4
     do
         modify b.txt $i

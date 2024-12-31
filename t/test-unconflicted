@@ -25,7 +25,7 @@ do
     commit -m "a⇒$i"
 done
 
-git checkout -b b master --
+git checkout -b b main --
 for i in $(seq 5)
 do
     modify b.txt $i

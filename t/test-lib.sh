@@ -1,5 +1,7 @@
 # This file is meant to be sourced into other test scripts.
 
+export GIT_CONFIG_GLOBAL=
+
 init_test_repo() {
     local path="$1"
     local description="$2"
@@ -7,7 +9,7 @@ init_test_repo() {
     delete_test_repo "$path" "$description"
 
     mkdir -p "$path"
-    git init "$path"
+    git init -b main "$path"
     echo "$description" >"$path/.git/description"
     printf '%s\n' "/*.out" "/*.css" "/*.html" >"$path/.git/info/exclude"
     git --git-dir="$path/.git" config user.name 'Loú User'
